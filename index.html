@@ -1284,11 +1284,11 @@ body::after {
       <div class="company-name">Ember AI</div>
       <div class="company-sector">AI</div>
     </div>
-    <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-2">
+    <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-2">
       <div class="company-name">Anthropic</div>
       <div class="company-sector">Artificial Intelligence</div>
     </a>
-    <a href="https://openai.com" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-2">
+    <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-2">
       <div class="company-name">OpenAI</div>
       <div class="company-sector">Artificial Intelligence</div>
     </a>
@@ -1304,10 +1304,10 @@ body::after {
       <div class="company-name">Supabase</div>
       <div class="company-sector">Developer Tools</div>
     </a>
-    <div class="portfolio-item reveal reveal-delay-4">
-      <div class="company-name">Legorah</div>
-      <div class="company-sector">AI</div>
-    </div>
+    <a href="https://legora.com" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-4">
+      <div class="company-name">Legora</div>
+      <div class="company-sector">AI · Legal</div>
+    </a>
     <a href="https://www.circle.com" target="_blank" rel="noopener noreferrer" class="portfolio-item reveal reveal-delay-5">
       <div class="company-name">Circle</div>
       <div class="company-sector">Fintech · Stablecoin</div>
@@ -1348,6 +1348,9 @@ body::after {
       <div class="company-name">SpaceX</div>
       <div class="company-sector">Aerospace · Exited</div>
     </a>
+    <div class="portfolio-item portfolio-more reveal reveal-delay-5">
+      <div class="company-name">and much more</div>
+    </div>
   </div>
   <p class="portfolio-disclaimer-inline reveal">Exposure may be held through other vehicles or other investment entities. Holdings are subject to change and may not reflect current positions at all times.</p>
   </div>
@@ -1417,7 +1420,7 @@ window.addEventListener('scroll', () => {
 
 // Scroll reveal
 // Auto-update portfolio count from number of .portfolio-item elements
-const portfolioCount = document.querySelectorAll('.portfolio-grid .portfolio-item').length;
+const portfolioCount = document.querySelectorAll('.portfolio-grid .portfolio-item:not(.portfolio-more)').length;
 const countEl = document.getElementById('portfolio-count');
 if (countEl && portfolioCount > 0) countEl.textContent = portfolioCount + '+';
 
